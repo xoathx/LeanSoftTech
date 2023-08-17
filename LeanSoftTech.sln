@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeanSoftTech", "LeanSoftTech\LeanSoftTech.csproj", "{2D49148F-FAEB-46DF-AA2B-55CB7BF81CA4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D49148F-FAEB-46DF-AA2B-55CB7BF81CA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D49148F-FAEB-46DF-AA2B-55CB7BF81CA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D49148F-FAEB-46DF-AA2B-55CB7BF81CA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D49148F-FAEB-46DF-AA2B-55CB7BF81CA4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {16CA7FEC-A229-4DDD-90BB-123B71F1B173}
+	EndGlobalSection
+EndGlobal
