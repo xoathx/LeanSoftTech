@@ -2,17 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace LeanSoftTech.Models
 {
 
-    class Child
+    public class Child
     {
-        public Int32 Id { get; set; }
-        public String FirstName { get; set; }
-        public String LastName { get; set; }
-        public Int64 BirthDate { get; set; }
-        public Gender Gender { get; set; }
+		[JsonPropertyName("id")]
+		public Int32 Id { get; set; }
+		[JsonPropertyName("firstName")]
+		public String FirstName { get; set; }
+		[JsonPropertyName("lastName")]
+		public String LastName { get; set; }
+		[JsonPropertyName("birthDate")]
+		public Int64 BirthDate { get; set; }
+		[JsonPropertyName("gender")]
+		public Gender Gender { get; set; }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Faker;
+using LeanSoftTech.Models;
 
 namespace LeanSoftTech.Util
 {
@@ -84,5 +85,51 @@ namespace LeanSoftTech.Util
                   
         }
 
+        public static double GenerateSalary()
+        {
+            Random random = new Random();
+
+            return random.Next(20000, 150000);
+        }
+
+        public static bool GenerateIsMarried()
+        {
+            Random random = new Random();
+            return random.NextDouble() >= 0.5;
+        }
+
+        public static Gender GenerateGender()
+        {
+            var random = new Random();
+
+            return (Gender)random.Next(0, 1);
+        }
+
+        public static Child[] GenerateChild()
+        {
+            var random = new Random();
+
+            int count = random.Next(0, 4);
+            List<Child> children = new List<Child>(count);
+
+            if(count == 0) 
+            {
+                return new Child[0];
+            }
+            for(int i = 1; i <= count; i++)
+            {
+                Child child = new Child()
+                {
+                    Id = i,
+                    FirstName = GenerateFirstName(),
+                    LastName = GenerateLastName(),
+                    BirthDate = GenerateBirthDate(),
+                    Gender = GenerateGender()
+                };
+
+                children.Add(child);
+            }
+            return children.ToArray();
+        }
     }
 }
