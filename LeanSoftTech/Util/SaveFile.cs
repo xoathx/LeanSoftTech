@@ -11,18 +11,17 @@ namespace LeanSoftTech.Util
 {
 	public static class SaveFile<T>
 	{
-		public async static void SaveAsJson(T data, string path)
+		public static void SaveAsJson(T data, string path)
 		{
 			var serializeOptions = new JsonSerializerOptions
 			{
 				PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
 				WriteIndented = true
 			};
+			string filepath = path + @"\" + "Persons.json";
 
-			await using FileStream stream = File.Create(path + @"\" + "Persons.json");
-			await JsonSerializer.SerializeAsync(stream, data, serializeOptions);
-
-            await Console.Out.WriteLineAsync("Json saved");
+            string json = JsonSerializer.Serialize(data, serializeOptions);
+			File.WriteAllText(filepath, json);
         }
 	}
 }

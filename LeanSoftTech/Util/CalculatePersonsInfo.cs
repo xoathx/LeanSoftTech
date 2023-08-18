@@ -9,26 +9,33 @@ namespace LeanSoftTech.Util
 {
 	public class CalculatePersonsInfo
 	{
-        public int PersonsCount;
-        public int PersonsCreditCardCount;
-        public int AverageChildAge;
+        public int PersonsCount { get; set; }
+        public int PersonsCreditCardCount { get; set; }
+        public int AverageChildAge { get; set; }
 
         private readonly List<Person> _persons;
         public CalculatePersonsInfo(List<Person> data)
         {
             _persons = data;
             PersonsCount = data.Count;
+            CalculateInfo();
         }
 
         private void CalculateInfo()
         {
             int totalChildren = 0;
+            int totalAge = 0;
             foreach (Person person in _persons)
             {
                 PersonsCreditCardCount += person.CreditCardNumbers.Length;
                 totalChildren += person.Children.Length;
-                //TODO average age
+                for(int i = 0; i < person.Children.Length; i++)
+                {
+                    TimeSpan timeSpan = TimeSpan.FromSeconds(person.Children[i].BirthDate);
+                    totalAge += timeSpan.Days / 365; 
+                }
             }
+            AverageChildAge = totalAge / totalChildren;
         }
     }
 }
