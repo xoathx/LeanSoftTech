@@ -14,7 +14,7 @@ namespace LeanSoftTech.Util
 
         public void WriteInfo()
         {
-            Console.WriteLine("           = LeanSoft | Test task -           ");
+            Console.WriteLine("           - LeanSoft | Test task -           ");
             Console.WriteLine("----------------------------------------------");
             Console.WriteLine("Persons count: " + _list.Count);
 			Console.WriteLine("Persons credit card count: " + _calculatePersonsInfo.PersonsCreditCardCount);
