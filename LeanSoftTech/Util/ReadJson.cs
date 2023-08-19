@@ -19,7 +19,6 @@ namespace LeanSoftTech.Util
         }
         public List<T> JsonToList()
 		{
-
 			var list = JsonSerializer.Deserialize<List<T>>(_json);
 			return list;
 		}
